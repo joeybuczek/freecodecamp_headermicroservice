@@ -36,13 +36,14 @@ app.get('/whoami', function (req, res) {
     responseObj.ip = ip;
     
     // assign language
-    responseObj.language = navigator.language || "en";
+    //responseObj.language = navigator.language || "en";
+    responseObj.language = req.headers['accept-language'];
     
     // OS 
-    var appver = navigator.appVersion;
-    var os = appver.slice( appver.indexOf("\(") + 1, appver.indexOf("\)") );
+    var useragent = req.headers['user-agent'];
+    var os = useragent.slice( useragent.indexOf("\(") + 1, useragent.indexOf("\)") );
     responseObj.software = os;
-    
+
     // send response object
     res.send(JSON.stringify(responseObj));
 });
