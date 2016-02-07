@@ -1,0 +1,16 @@
+{
+  "name": "header-microservice",
+  "version": "1.0.0",
+  "description": "Free Code Camp challenge - Microservice that returns public IP, language, and OS for the browser being used.",
+  "scripts": {
+    "start": "node header.js"
+  },
+  "repository": "",
+  "author": "Joey Buczek <joe.buczek@gmail.com>",
+  "dependencies": {
+    "async": "~0.2.8",
+    "express": "~3.2.4",
+    "request": "^2.69.0",
+    "socket.io": "~0.9.14"
+  }
+}
