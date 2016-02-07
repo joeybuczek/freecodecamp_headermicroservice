@@ -21,8 +21,8 @@ var responseObj = {};
 var html = "<h2>Header Parser Microservice</h2>" + 
            "<p>This microservice will supply your IP address and browser specifics in a JSON stringified format.</p>" +
            "<p>Point your http GET request here: " + 
-            "<a href='http://joeybuczek.herokuapp.com/fcc-headermicroservice/whoami'>" + 
-            "http://joeybuczek.herokuapp.com/fcc-headermicroservice/whoami</a></p>";
+            "<a href='https://fcc-headermicroservice.herokuapp.com/whoami'>" + 
+            "https://fcc-headermicroservice.herokuapp.com/whoami</a></p>";
 
 // route /
 app.get('/', function (req, res){
@@ -48,7 +48,7 @@ app.get('/whoami', function (req, res) {
 });
 
 // listen
-var port = process.env.port || 8080;
+var port = process.env.PORT || 8080;
 app.listen(port, function(){
     console.log("Now listening on port " + port);
 });
